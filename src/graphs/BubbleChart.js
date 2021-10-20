@@ -1,5 +1,5 @@
 // import dependencies
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Plot from 'react-plotly.js';
 import {teamsAll, totalMedals, gdp, population, continents} from "../data/medalsAllCountries"
 
@@ -16,32 +16,21 @@ class BubbleChart extends Component {
                             x: gdp,
                             y: totalMedals,
                             text: teamsAll,
-                            marker: {
-                                size: population,
-                                sizeref: 900000,
-                                sizemode:'area'
-                            },
-                            transforms: [{
-                                type: "groupby",
-                                groups: continents
-                            }],
                             hovertemplate:
-                            "<b>%{text}</b><br>" +
-                            "%{yaxis.title.text}: %{y}<br>" +
-                            "%{xaxis.title.text}: %{x}<br>" +
-                            "Population: %{marker.size}<br>"
+                            "<b>%{text}</b><br>"
+                            + "%{yaxis.title.text}: %{y}<br>"
+                            + "%{xaxis.title.text}: %{x}<br>" 
                         },
                     ]}
-                    layout = { {
+                    layout = {{
                         xaxis: {
                             tickangle: -45,
                             title:"GDP (in USD)",
-                            type:'log',
-                            range: [8,14]
+                            // try log-scaling the x-axis
                             // since we're using logarithmic x-axis,
                             // range is gotten from [log(min),log(max)]
-                            // where min = 10000000, max = 30000000000000
-                            // autorange: true
+                            // where in this dataset, 
+                            // min = 10,000,000, max = 30,000,000,000,000
                           },
                         yaxis: {
                             title:"Total Medals"

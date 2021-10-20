@@ -1,3 +1,5 @@
+// topFiveCountries is a JSON string, 
+// it is the raw data strucutre for Bar Chart.
 const topFiveCountries = [
     {
         "Rank": "1",
@@ -44,6 +46,11 @@ const topFiveCountries = [
         "Total": "71",
         "Rank by Total": "3"
     }]
+// Observe data structure
+console.log(topFiveCountries)    
+console.log(topFiveCountries.Team)
+
+// Restructure for better usage: using getData function
 var getData = function() {
   var teamData = [];
   var goldData = [];
@@ -58,12 +65,17 @@ var getData = function() {
   }
   return {teamData, goldData, silverData, bronzeData}
 }
-
+// Call getData function
 const data = getData()
+// Store function outputs into new variables for readily use
 const teams = data.teamData
 const golds = data.goldData
 const silvers = data.silverData
 const bronzes = data.bronzeData
 
-
+// Don't forget to export
 export {topFiveCountries, teams, golds, silvers, bronzes}
+
+// let's observe the data structures again
+console.log(topFiveCountries)
+console.log(teams)

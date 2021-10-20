@@ -1,5 +1,7 @@
 // import dependencies
-import React, { Component } from 'react';
+// because we are using ES7, we don't need to import React when we write in JSX
+// However, we do want a shortcut for "Component", so let's import that
+import { Component } from 'react';
 import Plot from 'react-plotly.js';
 import { teams, golds, silvers, bronzes } from '../data/medals';
 
@@ -15,23 +17,7 @@ class BarChart extends Component {
                             x: teams,
                             y: golds,
                             name: 'Gold',
-                            marker: {
-                                color: "#FFD700",
-                            }},
-                        {type: 'bar',
-                            x: teams,
-                            y: silvers,
-                            name: 'Silver',
-                            marker: {
-                                color: "silver",
-                            }},
-                        {type: 'bar',
-                            x: teams,
-                            y: bronzes,
-                            name: 'Bronze',
-                            marker: {
-                                color: "#C3792F",
-                            }},
+                        },
                     ]}
                     layout = { {
                         xaxis: {
@@ -39,10 +25,10 @@ class BarChart extends Component {
                             title:"Country"
                           },
                         yaxis: {
-                            title: "Number of Medals"
+                            title: "Number of Gold Medals"
                         },
                         title: 'Medals of Top 5 Countries by Ranking',
-                        barmode: 'stack'} }
+                    } }
                 />
             </div>
         )

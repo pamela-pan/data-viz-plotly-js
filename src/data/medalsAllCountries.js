@@ -1,3 +1,4 @@
+// JSON data for Bubble Chart
 const medalsAll = [
     {
         "Rank": "1",
@@ -1116,8 +1117,8 @@ const medalsAll = [
         "Continent": "Asia"
     }
 ]
-
-    var getData = function() {
+// Restructure for better usage: using getData function
+var getData = function() {
         var teamData = [];
         var goldData = [];
         var silverData = [];
@@ -1139,15 +1140,16 @@ const medalsAll = [
         }
         return {teamData, goldData, silverData, bronzeData, gdpData, popData, medalsTotal, continentData}
       }
+// Call getData function, store outputs into new variables      
+const data = getData()
+const teamsAll = data.teamData
+const goldsAll = data.goldData
+const silversAll = data.silverData
+const bronzesAll = data.bronzeData
+const gdp = data.gdpData
+const population = data.popData
+const continents = data.continentData
+const totalMedals = data.medalsTotal
       
-      const data = getData()
-      const teamsAll = data.teamData
-      const goldsAll = data.goldData
-      const silversAll = data.silverData
-      const bronzesAll = data.bronzeData
-      const gdp = data.gdpData
-      const population = data.popData
-      const continents = data.continentData
-      const totalMedals = data.medalsTotal
-      
-      export {teamsAll, goldsAll, silversAll, bronzesAll, gdp, population, continents, totalMedals}
+// Don't forget to export
+export {teamsAll, goldsAll, silversAll, bronzesAll, gdp, population, continents, totalMedals}

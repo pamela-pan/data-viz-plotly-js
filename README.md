@@ -1,13 +1,14 @@
 # Project Introduction
-This is a data visualization project created during the Data Visualization With Plotly.js Workshop at NYU Shanghai.
+This is a data visualization project created during the Data Visualization With Plotly.js Workshop at NYU Shanghai.\
 Learn more about the workshop [here](tinyurl.com/datavizworkshops).
 
 # Notes to Workshop Participants
-It is recommended to create your own repo and upload your code there. You can find more in this [tutorial](https://code.visualstudio.com/docs/editor/github).
+It is recommended to create your own repo and upload your code there.\
+You can find more in this [tutorial](https://code.visualstudio.com/docs/editor/github).
 
 # Dataset
-Tokyo Olympics Data (Source: Kaggle, Arjun Prasad Sarkhel)
-GDP By Countries (Source: World Bank)
+Tokyo Olympics Data (Source: Kaggle, Arjun Prasad Sarkhel)\
+GDP By Countries (Source: World Bank)\
 Population By Countries (Source: World Bank)
 
 # Credit
